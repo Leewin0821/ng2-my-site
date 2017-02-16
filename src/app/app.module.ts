@@ -1,13 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
-import { AppComponent } from './app.component';
-import { SimpleFormComponent } from './simple-form/simple-form.component';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
+import { FormsModule } from '@angular/forms'
+import { HttpModule } from '@angular/http'
+import { AppComponent } from './app.component'
+import { SimpleFormComponent } from './simple-form/simple-form.component'
 import { MessageService } from './message.service'
+import { TopicService } from './topic.service'
 
-@NgModule({
+@NgModule( {
   declarations: [
     AppComponent,
     SimpleFormComponent
@@ -17,7 +17,11 @@ import { MessageService } from './message.service'
     FormsModule,
     HttpModule
   ],
-  providers: [MessageService],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+  providers: [
+    { provide: MessageService, useClass: MessageService },
+    { provide: TopicService, useClass: TopicService },
+  ],
+  bootstrap: [ AppComponent ]
+} )
+export class AppModule {
+}

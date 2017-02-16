@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MessageService } from './message.service'
+import { TopicService } from './topic.service'
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,8 @@ import { MessageService } from './message.service'
 })
 export class AppComponent {
   title = 'Heal World'
+  topics = ['awe', 'some', 'asc', 'awe', 'some', 'asc', 'awe', 'some', 'asc', 'awe', 'some', 'asc']
 
-  constructor(private message: MessageService) {}
+  constructor(@Inject(MessageService) private messageMessage,
+              @Inject(TopicService) private topicService) {}
 }

@@ -1,5 +1,13 @@
-<h1>
-  {{title}}, {{message.body}}!
-</h1>
+<body>
+  <h1>
+    {{title}}, {{messageMessage.body}}!
+  </h1>
 
-<app-simple-form></app-simple-form>
+  <div class="cards">
+    <div *ngFor="let topic of topics" class="card">
+      {{topic}}
+    </div>
+  </div>
+
+  <app-simple-form></app-simple-form>
+</body>
