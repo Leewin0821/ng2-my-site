@@ -9,8 +9,6 @@ import { TopicService } from './topic.service'
 })
 export class AppComponent {
   title = 'Heal World'
-  topics = ['awe', 'some', 'asc', 'awe', 'some', 'asc', 'awe', 'some', 'asc', 'awe', 'some', 'asc']
-
-  constructor(@Inject(MessageService) private messageMessage,
+  constructor(@Inject(MessageService) private messageService,
               @Inject(TopicService) private topicService) {}
 }

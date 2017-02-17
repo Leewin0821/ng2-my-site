@@ -5,4 +5,5 @@ export class TopicService {
 
   constructor() { }
 
+  topics = ['awe', 'some', 'foo', 'bar']
 }

@@ -1,12 +1,12 @@
 <body>
   <h1>
-    {{title}}, {{messageMessage.body}}!
+    {{title}}, {{messageService.body}}!
   </h1>
 
   <div class="cards">
-    <div *ngFor="let topic of topics" class="card">
+    <app-card *ngFor="let topic of topicService.topics">
       {{topic}}
-    </div>
+    </app-card>
   </div>
 
   <app-simple-form></app-simple-form>
