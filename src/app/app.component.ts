@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
-import { MessageService } from './message.service'
-import { TopicService } from './topic.service'
+import { MessageService } from './services/message.service'
+import { TopicService } from './services/topic.service'
 
 @Component({
   selector: 'app-root',

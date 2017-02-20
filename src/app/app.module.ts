@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core'
 import { FormsModule } from '@angular/forms'
 import { HttpModule } from '@angular/http'
 import { AppComponent } from './app.component'
-import { MessageService } from './message.service'
-import { TopicService } from './topic.service';
 import { SimpleFormComponent } from './components/simple-form/simple-form.component'
 import { CardComponent } from './components/card/card.component'
+import { MessageService } from './services/message.service'
+import { TopicService } from './services/topic.service'
 
 @NgModule( {
   declarations: [
