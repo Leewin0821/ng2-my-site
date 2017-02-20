@@ -3,11 +3,11 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class MessageService {
 
+  body = 'Awesome Man';
+
   constructor() { }
 
-  body = 'Awesome Man'
-
   setMessage(value) {
-    this.body = value
+    this.body = value;
   }
 }

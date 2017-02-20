@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from '../../services/message.service'
+import { MessageService } from '../../services/message.service';
 
 @Component({
   selector: 'app-simple-form',
@@ -9,14 +9,14 @@ import { MessageService } from '../../services/message.service'
 export class SimpleFormComponent implements OnInit {
 
   constructor(private message: MessageService) {
-    this.message = message
+    this.message = message;
   }
 
   ngOnInit() {
   }
 
   onClick(value) {
-    this.message.setMessage(value)
+    this.message.setMessage(value);
   }
 
 }
