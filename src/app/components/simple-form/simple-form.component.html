@@ -1,2 +1,4 @@
-<input #inputText type="text">
-<button (click)="onClick(inputText.value)">Click Me!</button>
+<md-input-container>
+  <input type="text" mdInput placeholder="Favorite food" value="Sushi">
+</md-input-container>
+<button md-button (click)="onClick(inputText.value)">Click Me!</button>
