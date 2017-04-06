@@ -7,4 +7,7 @@ let sh = 'sh', shFlag = '-c', cmd = 'ng --version';
 //   env: process.env,
 //   stdio: ['pipe', process.stdout, process.stderr]
 // });
-spawn('ng', ['--version']);
+spawn('ng', ['--version', ''], {
+  env: process.env,
+  stdio: ['pipe', process.stdout, process.stderr]
+});
